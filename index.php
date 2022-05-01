@@ -7,8 +7,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des contracts</title>
+    <title><?php echo  isset($titre) && (!empty($titre))?$titre:"Application de gestion des contracts";?>- GContacts</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/plugins/simplelineicone/css/simple-line-icons.css">
 </head>
 <body>
     <div id="menu_haut">
@@ -21,7 +22,7 @@
         </div>
         <nav id="menu_tabs">
             <ul>
-                <li><a href="index.php?p=contacts">Contacts <span>50</span></a></li>
+                <li><a href="index.php?p=contacts">Contacts <span><?=TotalContact();?></span></a></li>
                 <li><a href="index.php?p=favoris">Favoris</a></li>
                 <li><a href="index.php?p=groupes">Groupes</a></li>
                 <li><a href="index.php?p=new" class="btn_nouveau">+ Nouveau</a></li>
@@ -29,7 +30,7 @@
         </nav>
         <div id="bloc_list_contact">
             <?php
-                SeConnecter();
+               // SeConnecter();
                 include_once('includes/traitements.php')
             ?>
         </div>

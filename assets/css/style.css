@@ -14,6 +14,11 @@ body{
     padding: 20px 40px;
     max-width: 900px;
 }
+@media screen and (max-width:900px) {
+    #bloc_contacts{
+        width: 85%;  
+    }
+}
 .entete_type3{
     font-size: 28px;
     margin: 0;
@@ -36,7 +41,9 @@ body{
     border-bottom: 1px solid #DEDEDE;
     margin-top: 30px;
 }
-
+a {
+    text-decoration: none;
+}
 #menu_tabs ul>li,
 #menu_tabs ul li
 {
@@ -73,13 +80,19 @@ body{
     width: 100%;
    ;
 }
+.centrer{
+    text-align: center;
+}
 span.c_photo{
-    width: 20px;
-    height: 20px;
-    background-color: #777777;
+    width: 25px;
+    height: 25px;
+    background-color: #d2e1f0;
     border-radius: 100%;
     display: block;
     float: left;
+    font-size: small;
+    line-height:25px;
+    text-align:center;
     margin-right: 5px;
 }
 a.btn_nouveau,
@@ -120,4 +133,29 @@ a.btn_nouveau,
 }
 .bloc_btn{
     text-align: center;
+}
+
+
+/**************************
+ACCUEIL
+**************************/
+.pagination{
+    padding: 0;
+    margin: 15px 0;
+}
+.pagination li{
+    display: inline-block;
+}
+.pagination li>a,
+.pagination li a
+{
+    padding: 10px;
+    border:1px solid #DDDDDD;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+.pagination li a.active{
+    background-color: #003366;
+    color:White;
+    border-width:0px;
 }
